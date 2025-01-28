@@ -19,8 +19,21 @@ The goal of this project is to implement two machine learning algorithms (Logist
 - tqdm
 
 ## Dataset 📊
+[Download Dataset from Google Drive](https://drive.google.com/file/d/1EIe30Afif5kdhX4IOZalc135pEWUpVNZ/view?usp=sharing)
 
 The dataset used in this project contains news articles labeled as "real" or "fake." It includes features such as the title, text, and date of the article. For the purpose of this project, the title, subject, and date columns were removed, as they were not helpful for classification.
+
+## The dataset used for this project is too large to be uploaded to GitHub. You can download it from Google Drive using the link below:
+
+[Download Dataset from Google Drive](https://drive.google.com/file/d/1EIe30Afif5kdhX4IOZalc135pEWUpVNZ/view?usp=sharing)
+
+### Instructions
+1. Download the file from the link above.
+2. Place the file in the project directory, inside a folder named `data/`.
+3. Ensure the file is named `News.csv` before running the code.
+
+If you encounter any issues, ensure you have proper access to the file or contact the project owner.
+
 
 ## Installation ⚙️
 
