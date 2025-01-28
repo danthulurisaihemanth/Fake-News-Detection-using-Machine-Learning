@@ -1,1 +1,85 @@
-# Fake-News-Detection-using-Machine-Learning
+# Fake News Detection using Machine Learning
+
+This project focuses on detecting fake news using machine learning algorithms such as Logistic Regression and Decision Tree in Python. The dataset used for this project contains news articles labeled as either "real" or "fake." The objective of this project is to build a model that classifies news articles into one of these two categories.
+
+## Project Overview
+
+The goal of this project is to implement two machine learning algorithms (Logistic Regression and Decision Tree) to predict whether a given news article is fake or real. 
+
+## Technologies Used
+
+- Python 3
+- Jupyter Notebook
+- pandas
+- seaborn
+- matplotlib
+- NLTK (Natural Language Toolkit)
+- scikit-learn
+- WordCloud
+- tqdm
+
+## Dataset
+
+The dataset used in this project contains news articles labeled as "real" or "fake." It includes features such as the title, text, and date of the article. For the purpose of this project, the title, subject, and date columns were removed, as they were not helpful for classification.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fake-news-detection.git
+Install the necessary Python libraries:
+bash
+Copy
+Edit
+pip install -r requirements.txt
+File Structure
+notebooks/: Contains Jupyter notebooks with the code for data exploration, preprocessing, and model training.
+data/: Contains the dataset used for training and testing the models.
+requirements.txt: A list of Python dependencies required for this project.
+Usage
+Open the Jupyter notebook fake_news_detection.ipynb.
+Run the cells to perform the following steps:
+Load and preprocess the data.
+Perform exploratory data analysis (EDA) including visualizations like WordClouds and bar graphs.
+Preprocess text data by removing stopwords, punctuations, and irrelevant spaces.
+Train the Logistic Regression model and evaluate its performance.
+Split data into training and test sets and convert the text data into vectors using TfidfVectorizer.
+Evaluate the model's accuracy using accuracy_score.
+Preprocessing and Visualization
+Data Cleaning: Drop unnecessary columns (title, subject, and date), handle null values, and shuffle the dataset to prevent model bias.
+Text Preprocessing: Remove stopwords and punctuation, tokenize text, and perform stemming.
+WordCloud: Visualized word clouds separately for "real" and "fake" news to identify frequent terms.
+Top Words: Visualized the top 20 most frequent words using a bar chart.
+Model Training & Evaluation
+The model uses the Logistic Regression algorithm for classification. The data is vectorized using TfidfVectorizer before being fed into the model. After training, the model is evaluated on both the training and test datasets.
+
+The results show a high accuracy:
+
+Training Accuracy: 99.38%
+Test Accuracy: 98.93%
+python
+Copy
+Edit
+# Testing the model
+print(accuracy_score(y_train, model.predict(x_train)))
+print(accuracy_score(y_test, model.predict(x_test)))
+Results
+The Logistic Regression model achieved high accuracy, making it a reliable choice for fake news detection.
+
+Conclusion
+This project demonstrates the effectiveness of Logistic Regression for detecting fake news. Further improvements can be made by exploring other machine learning algorithms, fine-tuning the model, or using deep learning techniques.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+vbnet
+Copy
+Edit
+
+This README now includes the steps you followed in your code, from data preprocessing to model evaluation. Let me know if you need further modifications!
+
+
+
+
+
+
