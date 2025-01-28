@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #343a40;
+    color: #ff7f50; /* Soft orange color for contrast */
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 4px solid #ff7f50;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Container */
+.container {
+    margin-top: 50px;
+    padding: 0 15px;
+}
+
+/* News Input Form */
+form {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form textarea {
+    resize: vertical;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #495057;
+}
+
+/* Prediction Result */
+.alert {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Chart Containers */
+.chart-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.chart-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin-top: 30px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+
+    .chart-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

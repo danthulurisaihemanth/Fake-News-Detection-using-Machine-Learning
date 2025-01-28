@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+</head>
+<body>
+    <h1>Fake News Detection</h1>
+    
+    <!-- Form to input news text -->
+    <form action="/predict" method="POST">
+        <label for="news_text">Enter News Text:</label><br>
+        <textarea name="news_text" id="news_text" rows="10" cols="50" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if prediction_result %}
+        <h2>Prediction: {{ prediction_result }}</h2>
+    {% endif %}
+</body>
+</html>
