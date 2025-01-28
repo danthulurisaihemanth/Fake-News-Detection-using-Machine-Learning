@@ -75,6 +75,30 @@ The results show a high accuracy:
 ## Training Accuracy: 99.38%
 ## Test Accuracy: 98.93%
 
+## Flask App for Fake News Detection 🚀
+
+This project also includes a basic Flask web app for fake news detection using the trained Logistic Regression model.
+
+### How to Run the Flask App:
+
+1. Clone the repository or download the project.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Navigate to the `flask_app` directory:
+   ```bash
+   cd flask_app
+   ```
+4. Run the Flask app:
+   ```bash
+   python app.py
+   ```
+5. Open a browser and go to `http://127.0.0.1:5001/` to use the fake news detection app.
+
+### How It Works:
+- You can enter any news text, and the model will predict whether it’s "Real News" or "Fake News".
+
 ## CONCLUSION 🎯
 This project demonstrates the effectiveness of Logistic Regression for detecting fake news. Further improvements can be made by exploring other machine learning algorithms, fine-tuning the model, or using deep learning techniques.
 
