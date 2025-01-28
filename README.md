@@ -1,12 +1,12 @@
-# Fake News Detection using Machine Learning
+# Fake News Detection using Machine Learning 📰🚫
 
 This project focuses on detecting fake news using machine learning algorithms such as Logistic Regression and Decision Tree in Python. The dataset used for this project contains news articles labeled as either "real" or "fake." The objective of this project is to build a model that classifies news articles into one of these two categories.
 
-## Project Overview
+## Project Overview🔍
 
 The goal of this project is to implement two machine learning algorithms (Logistic Regression and Decision Tree) to predict whether a given news article is fake or real. 
 
-## Technologies Used
+## Technologies Used 💻
 
 - Python 3
 - Jupyter Notebook
@@ -18,11 +18,11 @@ The goal of this project is to implement two machine learning algorithms (Logist
 - WordCloud
 - tqdm
 
-## Dataset
+## Dataset 📊
 
 The dataset used in this project contains news articles labeled as "real" or "fake." It includes features such as the title, text, and date of the article. For the purpose of this project, the title, subject, and date columns were removed, as they were not helpful for classification.
 
-## Installation
+## Installation ⚙️
 
 1. Clone the repository:
    ```bash
@@ -32,13 +32,13 @@ The dataset used in this project contains news articles labeled as "real" or "fa
 
 pip install -r requirements.txt
 
-## File Structure
+## File Structure 📁
 
 ## notebooks/: Contains Jupyter notebooks with the code for data exploration, preprocessing, and model training.
 ## data/: Contains the dataset used for training and testing the models.
 ## requirements.txt: A list of Python dependencies required for this project.
 
-## Usage
+## Usage 📜
 
 1. Open the Jupyter notebook fake_news_detection.ipynb
 
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 . Evaluate the model's accuracy using accuracy_score
 
-## PREPROCESSING AND VISUALIZATION
+## PREPROCESSING AND VISUALIZATION 🛠️
 
 . Data Cleaning: Drop unnecessary columns ( title,subject , and date ), handle null values,and shuffle the dataset to prevent model bias.
 
@@ -67,7 +67,7 @@ terms.
 
 . Top Words: Visualized the top 20 most frequent words using a bar chart.
 
-## MODEL TRAINING & EVALUATION
+## MODEL TRAINING & EVALUATION ⚖️
 The model uses the Logistic Regression algorithm for classification. The data is vectorized using TfidfVectorizer before being fed into the model. After training, the model is evaluated on both the training and test datasets.
 
 The results show a high accuracy:
@@ -75,8 +75,12 @@ The results show a high accuracy:
 ## Training Accuracy: 99.38%
 ## Test Accuracy: 98.93%
 
-## @CONCLUSION
+## CONCLUSION 🎯
 This project demonstrates the effectiveness of Logistic Regression for detecting fake news. Further improvements can be made by exploring other machine learning algorithms, fine-tuning the model, or using deep learning techniques.
 
-## LICENSE
+## LICENSE 📝
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Links 🌐
+GitHub Repository: Your GitHub Link
+Project Demo: Project Demo Link
