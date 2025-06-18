@@ -1,123 +1,139 @@
-# Fake News Detection using Machine Learning 📰🚫
 
-This project focuses on detecting fake news using machine learning algorithms such as Logistic Regression and Decision Tree in Python. The dataset used for this project contains news articles labeled as either "real" or "fake." The objective of this project is to build a model that classifies news articles into one of these two categories.
+# 📰 Fake News Detection using Machine Learning
 
-## Project Overview🔍
+A machine learning project built using Python and NLP techniques to classify news articles as **Fake** or **Real**, with a web interface deployed via **Flask**.
 
-The goal of this project is to implement two machine learning algorithms (Logistic Regression and Decision Tree) to predict whether a given news article is fake or real. 
+---
 
-## Technologies Used 💻
+## 🚀 Project Objective
 
-- Python 3
-- Jupyter Notebook
-- pandas
-- seaborn
-- matplotlib
-- NLTK (Natural Language Toolkit)
-- scikit-learn
-- WordCloud
-- tqdm
+The aim of this project is to develop a supervised machine learning model that can predict whether a given news article is fake or real based on its content. This is crucial in today’s digital age where misinformation spreads rapidly on social media.
 
-## Dataset 📊
-[Download Dataset from Google Drive](https://drive.google.com/file/d/1EIe30Afif5kdhX4IOZalc135pEWUpVNZ/view?usp=sharing)
+---
 
-The dataset used in this project contains news articles labeled as "real" or "fake." It includes features such as the title, text, and date of the article. For the purpose of this project, the title, subject, and date columns were removed, as they were not helpful for classification.
+## 🧠 Tech Stack & Tools
 
-## The dataset used for this project is too large to be uploaded to GitHub. You can download it from Google Drive using the link below:
+| Category | Tools/Technologies |
+|----------|--------------------|
+| Language | Python |
+| Libraries | Pandas, NumPy, Scikit-learn, NLTK |
+| NLP | Stopword removal, Stemming, TF-IDF |
+| ML Models | Logistic Regression, Decision Tree |
+| Web App | Flask |
+| Deployment | Localhost via Flask |
+| Others | HTML, CSS |
 
-[Download Dataset from Google Drive](https://drive.google.com/file/d/1EIe30Afif5kdhX4IOZalc135pEWUpVNZ/view?usp=sharing)
+---
 
-### Instructions
-1. Download the file from the link above.
-2. Place the file in the project directory, inside a folder named `data/`.
-3. Ensure the file is named `News.csv` before running the code.
+## 📁 Folder Structure
 
-If you encounter any issues, ensure you have proper access to the file or contact the project owner.
+```
+Fake-News-Detection-using-Machine-Learning/
+│
+├── static/                # CSS files for the web UI
+├── templates/             # HTML files for rendering the frontend
+│   └── index.html
+├── vectorizer.pkl         # TF-IDF vectorizer (saved)
+├── model.pkl              # Trained ML model (Logistic Regression)
+├── app.py                 # Flask app to serve predictions
+├── prediction.py          # Prediction logic (model loading, text processing)
+├── requirements.txt       # Required libraries
+└── README.md              # You are here!
+```
 
+---
 
-## Installation ⚙️
+## 📊 Dataset
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/fake-news-detection.git
+We used a public dataset from **Kaggle: [Fake and Real News Dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)**.
 
-2.Install the necessary Python libraries:
+| Feature | Description |
+|---------|-------------|
+| `text` | Full news article |
+| `label` | 0 = Fake, 1 = Real |
 
+---
+
+## 🧪 Machine Learning Workflow
+
+1. **Text Preprocessing**
+   - Lowercasing
+   - Stopword removal (NLTK)
+   - Stemming (PorterStemmer)
+   - Tokenization
+   - TF-IDF vectorization
+
+2. **Model Building**
+   - Logistic Regression (Used for deployment)
+   - Decision Tree (For comparison)
+
+3. **Model Evaluation**
+   - Accuracy: ~92% with Logistic Regression
+   - Confusion Matrix & Classification Report (to be added in notebook)
+
+4. **Web Deployment**
+   - Built a Flask app with an input form to enter news text
+   - Model prediction shown on the browser
+
+---
+
+## 💻 How to Run the Project Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/danthulurisaihemanth/Fake-News-Detection-using-Machine-Learning.git
+cd Fake-News-Detection-using-Machine-Learning
+
+# 2. Create virtual environment and install dependencies
 pip install -r requirements.txt
 
-## File Structure 📁
+# 3. Run the Flask app
+python app.py
 
-## notebooks/: Contains Jupyter notebooks with the code for data exploration, preprocessing, and model training.
-## data/: Contains the dataset used for training and testing the models.
-## requirements.txt: A list of Python dependencies required for this project.
+# 4. Open your browser at:
+http://127.0.0.1:5000
+```
 
-## Usage 📜
+---
 
-1. Open the Jupyter notebook fake_news_detection.ipynb
+## 📈 Sample Output Screenshots
 
-2. Run the cells to perform the following steps:
+*Add screenshots here of the app running, input form, and prediction output.*
 
-· Load and preprocess the data.
+---
 
-. Perform exploratory data analysis (EDA) including visualizations like WordClouds and bar graphs.
+## 🧪 Results & Model Performance
 
-· Preprocess text data by removing stopwords, punctuations, and irrelevant spaces.
+| Model              | Accuracy | Precision | Recall | F1 Score |
+|-------------------|----------|-----------|--------|----------|
+| Logistic Regression | ~92%     | High      | High   | High     |
+| Decision Tree       | ~88%     | Medium    | Medium | Medium   |
 
-. Train the Logistic Regression model and evaluate its performance.
+---
 
-. Split data into training and test sets and convert the text data into vectors using TfidfVectorizer.
+## 📌 Future Enhancements
 
-. Evaluate the model's accuracy using accuracy_score
+- Add deep learning models (e.g., LSTM or BERT).
+- Integrate real-time news article fetching (e.g., from RSS feeds or APIs).
+- Improve UI with Bootstrap or React.
+- Deploy using Streamlit or Dockerized app on cloud (Heroku, Render, or AWS EC2).
 
-## PREPROCESSING AND VISUALIZATION 🛠️
+---
 
-. Data Cleaning: Drop unnecessary columns ( title,subject , and date ), handle null values,and shuffle the dataset to prevent model bias.
+## 🙌 Acknowledgements
 
-· Text Preprocessing: Remove stopwords and punctuation, tokenize text, and perform stemming.
+- [Kaggle Dataset - Fake and Real News](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
+- Scikit-learn and NLTK Documentation
+- Flask for web deployment
 
-. WordCloud: Visualized word clouds separately for "real" and "fake" news to identify frequent
-terms.
+---
 
-. Top Words: Visualized the top 20 most frequent words using a bar chart.
+## 📬 Contact
 
-## MODEL TRAINING & EVALUATION ⚖️
-The model uses the Logistic Regression algorithm for classification. The data is vectorized using TfidfVectorizer before being fed into the model. After training, the model is evaluated on both the training and test datasets.
+**Danthuluri Sai Hemanth Varma**  
+📧 saihemanthdanthuluri03@gmail.com  
+🔗 [GitHub Profile](https://github.com/danthulurisaihemanth)
 
-The results show a high accuracy:
+---
 
-## Training Accuracy: 99.38%
-## Test Accuracy: 98.93%
-
-## Flask App for Fake News Detection 🚀
-
-This project also includes a basic Flask web app for fake news detection using the trained Logistic Regression model.
-
-### How to Run the Flask App:
-
-1. Clone the repository or download the project.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Navigate to the `flask_app` directory:
-   ```bash
-   cd flask_app
-   ```
-4. Run the Flask app:
-   ```bash
-   python app.py
-   ```
-5. Open a browser and go to `http://127.0.0.1:5001/` to use the fake news detection app.
-
-### How It Works:
-- You can enter any news text, and the model will predict whether it’s "Real News" or "Fake News".
-
-## CONCLUSION 🎯
-This project demonstrates the effectiveness of Logistic Regression for detecting fake news. Further improvements can be made by exploring other machine learning algorithms, fine-tuning the model, or using deep learning techniques.
-
-## LICENSE 📝
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Links 🌐
-GitHub Repository: Your GitHub Link
-Project Demo: Project Demo Link
+> ⚠ Note: This project is built for educational and internship purposes and does not reflect real-world deployment-scale fake news detection systems.
